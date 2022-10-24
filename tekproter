@@ -17,7 +17,7 @@
     </author>
     <category citation-format="author-date"/>
     <category field="science"/>
-    <updated>2020-12-14T16:00:00+07:00</updated>
+    <updated>2022-10-24T08:31:36+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="id">
@@ -275,7 +275,7 @@
   </macro>
   <macro name="author">
     <names variable="author" delimiter=", ">
-      <name delimiter-precedes-last="always" initialize-with="" name-as-sort-order="all" sort-separator=" "/>
+      <name and="text" et-al-min="3" initialize-with="" name-as-sort-order="all" sort-separator=" "/>
       <et-al font-style="italic"/>
       <label form="long" prefix=", " strip-periods="true"/>
       <substitute>
@@ -313,7 +313,6 @@
               <date-part name="day"/>
             </date>
           </group>
-          <!-- <text term="available at" suffix=":" text-case="capitalize-first"/>-->
           <text variable="URL" suffix="."/>
         </group>
       </if>
@@ -492,11 +491,6 @@
                 <text term="in" suffix=":" text-case="capitalize-first"/>
                 <text macro="editor" suffix="."/>
                 <text variable="container-title" font-style="italic" suffix="."/>
-                <!--<choose>
-                  <if variable="accessed">
-                    <text term="internet" prefix="[" suffix="]"/>
-                  </if
-                </choose>-->
               </group>
               <text macro="volume" suffix="."/>
               <text macro="edition"/>
@@ -535,7 +529,6 @@
             <group prefix=" " suffix=".">
               <text variable="container-title" form="short" font-style="italic" strip-periods="true" suffix="."/>
               <choose>
-                <!-- <if variable="status"> -->
                 <if variable="volume issue" match="none">
                   <text term="forthcoming" prefix=", "/>
                 </if>
