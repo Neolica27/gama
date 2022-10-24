@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="id-ID">
   <info>
-    <title>Institut Pertanian Bogor: Pedoman Penulisan Karya Ilmiah Edisi ke-4 (Indonesian)</title>
-    <id>http://www.zotero.org/styles/institut-pertanian-bogor</id>
-    <link href="http://www.zotero.org/styles/institut-pertanian-bogor" rel="self"/>
+    <title>Tekproter</title>
+    <id>http://www.zotero.org/styles/tekproter</id>
+    <link rel="self" href="http://www.zotero.org/styles/tekproter"/>
     <link href="http://www.zotero.org/styles/apa" rel="template"/>
-    <link href="http://ppki.staff.ipb.ac.id/unduhan/" rel="documentation"/>
-    <link href="https://drive.google.com/file/d/0B0YEuQotqd_BQVpkR0lHNHctSHM/view" rel="documentation"/>
     <author>
-      <name>Auriza Rahmad Akbar</name>
-      <email>auriza@apps.ipb.ac.id</email>
-    </author>
-    <author>
-      <name>M. Rachmatarramadhan</name>
-      <email>rachmatarramadhan@gmail.com</email>
+      <name>gusmagama</name>
+      <email>gusma.gama@gmail.com</email>
     </author>
     <category citation-format="author-date"/>
     <category field="science"/>
-    <updated>2022-10-24T08:31:36+00:00</updated>
+    <updated>2022-10-24T08:58:17+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="id">
@@ -274,10 +268,10 @@
     </names>
   </macro>
   <macro name="author">
-    <names variable="author" delimiter=", ">
-      <name and="text" et-al-min="3" initialize-with="" name-as-sort-order="all" sort-separator=" "/>
+    <names variable="author" delimiter=",">
+      <name and="text" et-al-min="3" initialize-with="." name-as-sort-order="all"/>
       <et-al font-style="italic"/>
-      <label form="long" prefix=", " strip-periods="true"/>
+      <label strip-periods="true" prefix=", "/>
       <substitute>
         <names variable="translator editor"/>
         <text variable="title"/>
@@ -340,7 +334,7 @@
   </macro>
   <macro name="publisher">
     <group delimiter=": ">
-      <text variable="publisher-place"/>
+      <text variable="publisher-place" form="short"/>
       <text variable="publisher" suffix="."/>
     </group>
   </macro>
@@ -454,7 +448,7 @@
     </sort>
     <layout prefix="(" suffix=")" delimiter="; ">
       <group delimiter=" ">
-        <text macro="author-short"/>
+        <text macro="author-short" suffix=","/>
         <text macro="year"/>
       </group>
       <text variable="locator" prefix=":"/>
