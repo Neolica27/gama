@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" name-delimiter="" demote-non-dropping-particle="sort-only" default-locale="id-ID">
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="id-ID">
   <info>
-    <title>tekproter</title>
-    <id>http://csl.mendeley.com/styles/styles/tekproter</id>
+    <title>Institut Pertanian Bogor: Pedoman Penulisan Karya Ilmiah Edisi ke-4 (Indonesian)</title>
+    <id>http://www.zotero.org/styles/institut-pertanian-bogor</id>
+    <link href="http://www.zotero.org/styles/institut-pertanian-bogor" rel="self"/>
+    <link href="http://www.zotero.org/styles/apa" rel="template"/>
+    <link href="http://ppki.staff.ipb.ac.id/unduhan/" rel="documentation"/>
+    <link href="https://drive.google.com/file/d/0B0YEuQotqd_BQVpkR0lHNHctSHM/view" rel="documentation"/>
+    <author>
+      <name>Auriza Rahmad Akbar</name>
+      <email>auriza@apps.ipb.ac.id</email>
+    </author>
+    <author>
+      <name>M. Rachmatarramadhan</name>
+      <email>rachmatarramadhan@gmail.com</email>
+    </author>
     <category citation-format="author-date"/>
     <category field="science"/>
-    <updated>2022-10-24T07:41:51+00:00</updated>
+    <updated>2020-12-14T16:00:00+07:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="id">
@@ -257,13 +269,13 @@
   </locale>
   <macro name="editor">
     <names variable="translator editor" delimiter="; " suffix=".">
-      <name delimiter=", " delimiter-precedes-last="contextual" initialize-with="" name-as-sort-order="all" sort-separator=" "/>
+      <name delimiter=", " delimiter-precedes-last="always" initialize-with="" name-as-sort-order="all" sort-separator=" "/>
       <label prefix=", "/>
     </names>
   </macro>
   <macro name="author">
-    <names variable="author">
-      <name delimiter=", " suffix="" and="text" delimiter-precedes-last="always" initialize-with="." name-as-sort-order="all"/>
+    <names variable="author" delimiter=", ">
+      <name delimiter-precedes-last="always" initialize-with="" name-as-sort-order="all" sort-separator=" "/>
       <et-al font-style="italic"/>
       <label form="long" prefix=", " strip-periods="true"/>
       <substitute>
@@ -301,6 +313,7 @@
               <date-part name="day"/>
             </date>
           </group>
+          <!-- <text term="available at" suffix=":" text-case="capitalize-first"/>-->
           <text variable="URL" suffix="."/>
         </group>
       </if>
@@ -440,9 +453,9 @@
       <key macro="year"/>
       <key macro="author-short"/>
     </sort>
-    <layout delimiter=";" prefix="(" suffix=")">
-      <group delimiter=", ">
-        <text macro="author-short" quotes="false"/>
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <group delimiter=" ">
+        <text macro="author-short"/>
         <text macro="year"/>
       </group>
       <text variable="locator" prefix=":"/>
@@ -479,6 +492,11 @@
                 <text term="in" suffix=":" text-case="capitalize-first"/>
                 <text macro="editor" suffix="."/>
                 <text variable="container-title" font-style="italic" suffix="."/>
+                <!--<choose>
+                  <if variable="accessed">
+                    <text term="internet" prefix="[" suffix="]"/>
+                  </if
+                </choose>-->
               </group>
               <text macro="volume" suffix="."/>
               <text macro="edition"/>
@@ -517,6 +535,7 @@
             <group prefix=" " suffix=".">
               <text variable="container-title" form="short" font-style="italic" strip-periods="true" suffix="."/>
               <choose>
+                <!-- <if variable="status"> -->
                 <if variable="volume issue" match="none">
                   <text term="forthcoming" prefix=", "/>
                 </if>
