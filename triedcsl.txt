@@ -263,7 +263,7 @@
   </macro>
   <macro name="author">
     <names variable="author">
-      <name delimiter="" suffix=" " and="text" delimiter-precedes-last="always" initialize-with="." name-as-sort-order="all"/>
+      <name delimiter="," suffix=" " and="text" delimiter-precedes-last="contextual" initialize-with="." name-as-sort-order="all"/>
       <et-al font-style="italic"/>
       <label form="long" prefix=", " strip-periods="true"/>
       <substitute>
