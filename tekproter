@@ -327,7 +327,7 @@
           <text variable="note" prefix="[" suffix="]"/>
         </if>
         <else-if type="thesis">
-          <text variable="genre" prefix="[" suffix="]"/>
+          <text variable="genre" prefix="[" suffix="]" font-style="italic"/>
         </else-if>
       </choose>
     </group>
